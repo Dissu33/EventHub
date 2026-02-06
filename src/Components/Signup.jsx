@@ -8,6 +8,7 @@ const Register = () => {
     firstName: '',
     lastName: '',
     email: '',
+    countryCode: '+91',
     phone: '',
     password: '',
     confirmPassword: '',
@@ -105,7 +106,7 @@ const Register = () => {
           firstName: formData.firstName,
           lastName: formData.lastName,
           email: formData.email,
-          phone: formData.phone,
+          phone: formData.countryCode + formData.phone,
           password: formData.password,
           createdAt: new Date().toISOString()
         };
@@ -211,15 +212,34 @@ const Register = () => {
 
               <div className="form-group">
                 <label htmlFor="phone">Phone Number</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className={errors.phone ? 'error' : ''}
-                  placeholder="Enter your phone number"
-                />
+                <div className="phone-input-group">
+                  <select
+                    name="countryCode"
+                    value={formData.countryCode}
+                    onChange={handleChange}
+                    className="country-code-select"
+                  >
+                    <option value="+91">🇮🇳 +91</option>
+                    <option value="+1">🇺🇸 +1</option>
+                    <option value="+44">🇬🇧 +44</option>
+                    <option value="+61">🇦🇺 +61</option>
+                    <option value="+81">🇯🇵 +81</option>
+                    <option value="+86">🇨🇳 +86</option>
+                    <option value="+33">🇫🇷 +33</option>
+                    <option value="+49">🇩🇪 +49</option>
+                    <option value="+971">🇦🇪 +971</option>
+                    <option value="+65">🇸🇬 +65</option>
+                  </select>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className={errors.phone ? 'error' : ''}
+                    placeholder="Enter phone number"
+                  />
+                </div>
                 {errors.phone && <span className="error-message">{errors.phone}</span>}
               </div>
 

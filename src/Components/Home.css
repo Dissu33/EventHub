@@ -571,6 +571,24 @@ h2::after {
   color: #a0aec0;
 }
 
+.footer-bottom p {
+  margin: 0.5rem 0;
+}
+
+.developer-credit {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #cbd5e0;
+}
+
+.developer-credit strong {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
 /* Loading & Error States */
 .loading-events,
 .no-events {
@@ -598,6 +616,17 @@ h2::after {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-section {
+    padding: 5rem 2rem;
+  }
+
+  .events-grid,
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
   .hero-section {
     flex-direction: column;
@@ -616,6 +645,14 @@ h2::after {
 
   .hero-buttons {
     justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-secondary {
+    width: 100%;
+    max-width: 300px;
   }
 
   .hero-image {
@@ -635,11 +672,29 @@ h2::after {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .footer-section ul {
+    padding: 0;
+  }
 }
 
 @media (max-width: 480px) {
+  .hero-section {
+    padding: 3rem 1rem;
+  }
+
   .hero-content h1 {
     font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
   }
 
   .btn-primary,
@@ -654,5 +709,29 @@ h2::after {
 
   .event-details {
     padding: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .step-card {
+    padding: 1.5rem;
+  }
+
+  .developer-credit {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
   }
 }

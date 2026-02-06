@@ -274,6 +274,7 @@ function Home() {
         </div>
         <div className="footer-bottom">
           <p>&copy; 2025 EventHub. All rights reserved.</p>
+          <p className="developer-credit">Built with ❤️ by <strong>Deepak Chauhan</strong></p>
         </div>
       </footer>
     </div>
