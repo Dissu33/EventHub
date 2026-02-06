@@ -1,0 +1,154 @@
+.service-detail-page {
+  min-height: 100vh;
+}
+
+.back-button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: #5a6fd8;
+}
+
+.service-detail-hero {
+  display: flex;
+  align-items: center;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+
+.service-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.service-icon-large {
+  font-size: 4rem;
+}
+
+.service-detail-content h1 {
+  font-size: 3rem;
+  margin: 0;
+  color: #333;
+}
+
+.service-subtitle {
+  font-size: 1.3rem;
+  color: #667eea;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.service-full-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.service-hero-image {
+  flex: 1;
+}
+
+.service-hero-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.service-features-detailed {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.feature-check {
+  color: #28a745;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.service-benefits {
+  padding: 80px 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.benefit-card {
+  padding: 30px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.benefit-card h3 {
+  color: #667eea;
+  margin-bottom: 15px;
+}
+
+.service-cta {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.service-not-found {
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media (max-width: 768px) {
+  .service-detail-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .service-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .service-detail-content h1 {
+    font-size: 2.5rem;
+  }
+}
